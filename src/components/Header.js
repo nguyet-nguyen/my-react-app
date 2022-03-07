@@ -5,6 +5,7 @@ import TestState from './testHook/TestState'
 import HookFile from './testHook/HookFile'
 import { Link,  BrowserRouter as Router,
   Route,} from 'react-router-dom'
+import Product from './Product'
 export default function Header() {
   return (
     <Router>
@@ -21,20 +22,16 @@ export default function Header() {
                 <Link to='/hookfile' className="item">
                 Messages
                 </Link>
-                <a className="item">
-                  Friends
-                </a>
-                <a className="item">
-                  Messages
-                </a>
-                <a className="item">
-                  Messages
-                </a>
+                <Link to='/form' className="item">
+                Form
+                </Link>
             </nav>
           </div>
       </header>
       <Route path='/' exact component={TestState}></Route>
       <Route path='/hookfile' exact component={HookFile}></Route>
+      <Route path='/form' exact component={Product}></Route>
+
     </Router>
   )
 }
