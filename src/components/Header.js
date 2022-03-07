@@ -30,7 +30,6 @@ export default function Header() {
                 <a className="item">
                   Messages
                 </a>
-              
             </nav>
           </div>
       </header>
