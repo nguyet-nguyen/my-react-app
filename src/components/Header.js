@@ -6,6 +6,7 @@ import HookFile from './testHook/HookFile'
 import { Link,  BrowserRouter as Router,
   Route,} from 'react-router-dom'
 import Product from './Product'
+import ReactHookForm from './ReactHookForm'
 export default function Header() {
   return (
     <Router>
@@ -25,12 +26,16 @@ export default function Header() {
                 <Link to='/form' className="item">
                 Form
                 </Link>
+                <Link to='/react-hook-form' className="item">
+                react-hook-form
+                </Link>
             </nav>
           </div>
       </header>
       <Route path='/' exact component={TestState}></Route>
       <Route path='/hookfile' exact component={HookFile}></Route>
       <Route path='/form' exact component={Product}></Route>
+      <Route path='/react-hook-form' exact component={ReactHookForm}></Route>
 
     </Router>
   )
