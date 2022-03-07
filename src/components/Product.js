@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 export default function Product() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const mess = "Please input valid value";
+  const messError = "Please input valid value";
   const changeUsername = (event) => {
     setUsername(event.target.value);
   }
@@ -22,13 +22,13 @@ export default function Product() {
           <label>Username</label>
           <input type="text" name="username" id="username" value={username} placeholder="Username" onChange={changeUsername}/>
           <p style={{ color: 'red' }}>
-            {username==="" && mess}
+            {username==="" && messError}
           </p>
         </div>
         <div className="field">
           <label>Password</label>  
           <input type="password" name="password" id="password" value={password} placeholder="Password" onChange={changePassword} />
-          <p style={{ color: 'red' }}> {password==="" && mess}</p>
+          <p style={{ color: 'red' }}> {password==="" && messError}</p>
         </div>
         <button className="ui inverted orange button" disabled={password==="" || username===""} type="submit">Submit</button>
       </form>
